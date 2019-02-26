@@ -1,4 +1,4 @@
-defmodule Duper.WokerSupervisor do
+defmodule Duper.WorkerSupervisor do
   use DynamicSupervisor
 
   @me __MODULE__
@@ -12,6 +12,6 @@ defmodule Duper.WokerSupervisor do
   end
 
   def add_worker() do
-    {:ok, pid} = DynamicSupervisor.start_child(@me, Duper.Worker)
+    {:ok, _pid} = DynamicSupervisor.start_child(@me, Duper.Worker)
   end
 end

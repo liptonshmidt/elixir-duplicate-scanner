@@ -4,7 +4,7 @@ defmodule Duper.PathFinder do
   @me  __MODULE__
 
 
-  def start_link(_) do
+  def start_link(root) do
     GenServer.start_link(__MODULE__, root, name: @me)
   end
 
